@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,900&display=swap');
+
+$bg1:#292e3c;
+$bg2:#1f2128;
+$cicrlebg:#ff3e66;
+$blue:#2b70fa;
+@mixin phone {
+    @media (max-width:768px){
+        @content;
+    }
+}
+
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.navbar {
+    background-color: $bg1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid #fff;
+    z-index: 1000;
+    padding: 15px 0;
+    .nav-link {
+        color: white;
+        @include phone {
+            text-align: center !important;
+        }
+    }
+    .navbarbtn  {
+        color: white;
+        @include phone {
+            text-align: center !important;
+        }
+        .mybtn {
+            color: white;
+        }
+    }
+}
+#banner {
+    background-color: $bg1;
+    @include phone {
+        padding: 80px 0;
+    }
+    .bannerh {
+        height: 100vh;
+        @include phone {
+            height: auto;
+        }
+        .bannertitle {
+            h1 {
+                font-size: 60px;
+                @include phone {
+                    font-size: 52px;
+                }
+            }
+
+        }
+        .bannerimg {
+            position: relative;
+            img {
+                position: relative;
+                z-index: 2;
+                @include phone {
+                    width: 50%;
+                }
+            }
+            &::before {
+                content: "";
+              width: 500px;
+              height: 500px;
+              position: absolute;
+              background-color: $cicrlebg;
+              border-radius: 50%;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%,-50%);
+              @include phone {
+                  width: 400px;
+                  height: 400px;
+              }
+            }
+            .helperimg {
+                position: absolute;
+                right: 0;
+                bottom: 50px;
+            }
+        }
+    }
+}
+#second {
+    padding: 60px 0;
+    background-color: $bg2;
+}
+.b2title h1  {
+    font-size: 50px;
+     color: white;
+     font-weight: 800;
+}
+.secondbx {
+    background-color: #292e3c;
+    padding: 35px 20px;
+    img {
+        display: flex;
+        width: 50px;
+        height: 50px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto;
+        margin-bottom: 10px;
+      }
+}
+#third {
+    background-color: $bg1;
+    
+    .thirdbx {
+        margin-right: 30px;
+        border-right: 1px solid blue !important;
+        .l1 {
+            color: blue;
+        }
+        li {
+            background-color: $bg1;
+            color: white;
+            text-decoration: none;
+            list-style: none;
+            font-size: 35px;
+            i {
+                margin-right: 20px;
+            }
+        }
+    }
+    
+    .thirdbx3 {
+        margin-left: 60px;
+        span {
+            color: blue;
+        }
+        h1 {
+            font-weight: 800;
+            font-size: 50px;
+            color: white;
+            border-bottom: 1px solid blue;
+        }
+        p {
+            color: white;
+        }
+        button {
+            padding: 15px 40px;
+        }
+    }
+}
+
+
+
+
+
+
